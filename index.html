@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Connoisseur</title>
+</head>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cookie&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+<style>
+*{
+	font-family: 'Cookie', cursive;
+	color: #991f1f;
+}
+body{
+	 background: #fae9e8;
+}
+.navbar{
+ font-size: 30px;
+ background: #ebd9d8;
+ height: 70px;
+ position: fixed;
+ z-index: 1
+}
+
+.navbar ul li{
+	display: inline-block;
+	box-sizing: border-box;
+	padding: 40px 7px;
+	padding-right:52px;
+}
+.navbar ul li:hover
+{
+	height: 300px;
+	background-image: url('label.png');
+	background-repeat: no-repeat;
+
+	color: white;
+	
+}
+
+.navbar ul li a{
+	color: #991f1f;
+	text-decoration: none;
+}
+.navbar ul li a:hover{
+	color: white;
+
+}
+.active
+{
+	background-image: url('label.png');
+	background-repeat: no-repeat;
+	height: 300px;
+	color: white;
+}
+
+.con{
+	padding-top: 150px;
+}
+
+.display-1{
+	color: #991f1f;
+	font-weight: bold;
+	letter-spacing: 4px;
+
+}
+.display-5{
+	color: #991f1f;
+	font-weight: bold;
+	font-size: 35px;
+}
+.col-md-12 h1{
+	text-align: center;
+	font-weight: bold;
+	font-size: 85px; 
+	text-decoration: underline; 
+}
+.col-md-3 {
+	text-align: center;
+}
+.col-md-3 h2{
+	font-size: 38px;
+}
+.row{
+	margin-top:50px;
+}
+.btn{
+	margin-top: 15px;
+	padding: 0px 60px;
+	background: #991f1f;
+	font-size: 25px;
+	border-bottom:3px solid #2e302f; 
+	word-spacing: 2px;
+}
+.col-md-3 h2, h4{
+	color:#991f1f; 
+	font-weight: bold;
+}
+.col-md-4 img{
+	width: 100%;
+	height: 40%;
+	box-shadow: 5px 5px 8px 2px grey;
+}
+.col-md-4 img#gal{
+	height: 100%;
+	width: 100%;
+	margin: 30px;
+	filter: grayscale();
+}
+.col-md-4 img#gal:hover{
+	filter: inherit;
+	transform: translateY(-20px);
+	cursor: pointer;
+
+}
+.display-4{
+	font-weight: bold;
+}
+.info{
+	font-family: Poppins;
+	margin-top: 20px;
+	color: black;
+	text-align:left;
+	font-size: 17px;
+	text-align: justify;
+}
+.info a:hover{
+	text-decoration:none; 
+}
+
+.banner{
+	text-align: center;
+	background: linear-gradient(#851023,#851023,rgba(0,0,0,0.9));
+	height: 160px;
+	color: white;
+	padding-top: 30px;
+	font-size: 50px;
+	
+}
+.price{
+	position: absolute;
+	top: 100px;
+	left: 150px;
+	background-color: white;
+	border-radius: 50%;
+	width: 100px;
+	height: 100px;
+	text-align: center;
+	font-weight: bold;
+	border:2px solid #851023; 
+
+}
+.price h1{
+	position: absolute;
+	top: 20px;
+	left: 20px;
+	font-weight: bold;
+	 font-family: 'Cookie', cursive;
+}
+.order{
+	margin: 60px 120px;
+	background: white;
+}
+.orderbn{
+	padding:10px 20px;
+	background: #851023;
+	color: white;
+	word-spacing: 5px;
+	font-size: 18px;
+
+}
+
+.orderlist li{
+	padding: 10px; 
+	font-size: 20px;
+	font-family: Poppins;
+	list-style: none;
+	color: black;
+	font-weight: bold;
+	border-bottom: 1px solid #ccc;
+
+}
+#last{
+	border-bottom: none;
+
+}
+ul
+{
+	    height: 145px;
+    margin-top: -38px;
+}
+
+
+small{
+	font-family:Poppins;
+	font-size: 18px; 
+	color: #302e2e;
+}
+
+.fa{
+	font-size: 60px;
+	margin-left: 80px;
+	margin-top: 20px; 
+}
+.fa-instagram{
+	color:#dd2a7b;
+}
+.fa-twitter{
+	color: #1DA1F2;
+}
+.fa-pinterest{
+	color: red;
+}
+.fa-youtube{
+	color: #c4302b;
+}
+.fa-snapchat{
+	color: yellow;
+}
+.fa-whatsapp{
+	color: green;
+}
+@media only screen and (max-width: 768px) 
+{
+	.navbar-brand{
+		font-size: 30px!important;
+	}
+	.navbar {
+		width: 93.1%;
+	}
+	.navbar-toggler{
+		background: #851023;
+	}
+	.btn
+	{
+		width: 145px!important;
+		padding: 0px!important;
+	}
+	ul
+	{
+		text-align: center;
+   		padding: 2px;
+	}
+	
+	.header h1
+	{
+		font-size: 65px;
+    	text-align: center;
+	}
+	.header h2
+	{
+		margin: 0 60px;
+		font-size: 25px;
+		color:#851023 ;
+	}
+	.copyright{
+		display: none; 
+	}
+	.name{
+		display: none;
+	}
+	.col-md-4 img#gal{
+		filter: inherit;
+	}
+}
+</style>
+
+
+<body>
+<div class="container">
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Connoiseur</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="my-4">
+        <li class="nav-item">
+          <a class="nav-link " aria-current="page" href="#home">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#about">About</a>
+        </li>
+            <li class="nav-item">
+          <a class="nav-link " aria-current="page" href="#menu">Menu</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " aria-current="page" href="#gallery">Gallery</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " aria-current="page" href="#review">Review</a>
+        </li>
+         <li class="nav-item">
+          <a class="nav-link " aria-current="page" href="#contact">Contact</a>
+        </li>
+          </ul>
+        </li>
+        
+      </ul>
+     
+    </div>
+  </div>
+</nav>
+
+<div class="con" id="home">
+	<div class="row">
+		<div class="col-md-9">
+			<div class="header">
+			<h1 class="display-1">Connoisseur</h1>
+			<h2 class="display-5"> Template By: Abhijeetsinh.com</h2>
+		</div>
+	</div>
+		<div class="col-md-3">
+			<br>
+			<h2>Call Us:</h2>
+			<h4>+012 345 6789</h4>
+			<a href="" class="btn btn-danger">Or Email Us</a>
+		</div>
+	</div>
+
+	<div class="col-md-12">
+		<br>
+		<img src="restaurant-food-01.jpg" style="background-size: cover; width: 100%;">
+	</div>
+	
+	<hr style="border: 1px solid#991f1f; ">
+	<hr style="border: 1px dotted #991f1f; margin-top:  -12px;">
+</div>
+
+</div>
+<div class="about" id="about">
+	<br><br><br>
+
+<div class="container" >
+	<div class="col-md-12"><h1>About</h1></div>
+	<div class="row">
+<div class="col-md-4">
+	<h2 class="display-4" align="center"> Lorem Ipsum</h2>
+	<img src="luxury1.jpg">
+	<p class="info">
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur.
+	</p>
+</div>
+<div class="col-md-4">
+		<h2 class="display-4" align="center"> Lorem Ipsum</h2>
+	<img src="luxury2.jpg">
+	<p class="info">
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur.
+	</p>
+</div>
+<div class="col-md-4">
+		<h2 class="display-4" align="center" > Lorem Ipsum</h2>
+	<img src="luxury3.jpg">
+	<p class="info">
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. 
+	</p>
+</div>
+</div>
+	<hr style="border: 1px dotted #991f1f; ">
+<hr style="border: 1px solid#991f1f;margin-top:-12px; ">
+</div>
+</div>
+<div class="container" id="menu">
+		<br><br><br>
+		<div class="col-md-12"><h1>Menu</h1></div>
+	<div class="row">
+<div class="col-md-4">
+	<div>
+
+		<h1 class="banner">Breakfast</h1>
+		<div class="price"><h1>$99</h1></div>
+		<div class="order">
+			<a href="" class="orderbn">Order now</a>
+		</div>
+		<ul class="orderlist">
+			<li>Lorem Ipsum <small>Dolor Sit Amet !</small></li>
+			<li>Lorem Ipsum <small>Dolor Sit Amet !</small></li>
+			<li>Lorem Ipsum <small>Dolor Sit Amet !</small></li>
+			<li id="last">Lorem Ipsum <small>Dolor Sit Amet !</small></li>
+		</ul>
+	</div>
+</div>
+<div class="col-md-4 ">
+	<div>
+		<h1 class="banner">Lunch</h1>
+		<div class="price"><h1>$99</h1></div>
+		<div class="order">
+			<a href="" class="orderbn">Order now</a>
+		</div>
+		<ul class="orderlist">
+			<li>Lorem Ipsum <small>Dolor Sit Amet !</small></li>
+			<li>Lorem Ipsum <small>Dolor Sit Amet !</small></li>
+			<li>Lorem Ipsum <small>Dolor Sit Amet !</small></li>
+			<li id="last">Lorem Ipsum <small>Dolor Sit Amet !</small></li>
+		</ul>
+
+	</div>
+</div>
+<div class="col-md-4 ">
+	<div>
+		<h1 class="banner">Dinner</h1>
+		<div class="price"><h1>$99</h1></div>
+		<div class="order">
+			<a href="" class="orderbn">Order now</a>
+		</div>
+		<ul class="orderlist">
+			<li>Lorem Ipsum <small>Dolor Sit Amet !</small></li>
+			<li>Lorem Ipsum <small>Dolor Sit Amet !</small></li>
+			<li>Lorem Ipsum <small>Dolor Sit Amet !</small></li>
+			<li id="last">Lorem Ipsum <small>Dolor Sit Amet !</small></li>
+		</ul>
+	</div>
+	</div>
+</div>
+</div>
+</div>
+<div class="container" id="review">
+	<div class="review">
+
+	<hr style="border: 1px solid#991f1f;margin-top: 70px; ">
+	<hr style="border: 1px dotted #991f1f;margin-top: -12px; ">
+	<div class="row">
+<div class="col-md-4">
+	<div>
+		<h2 class="display-4" align="center"> Ratings and Review</h2>
+		<p class="info">
+		"The Website user interface is extremely user friendly and Such an amazing experience 
+		for food and services as its best! "</p>
+		<footer class="footer">- Chris Evans</footer>
+	</p>
+	<p class="info">
+		"All new Experience of the Cruise and Affordable pricing means a lot for it
+		Services are best part and all time favourite. Enjoyed a lot!"</p>
+		<footer class="footer">- RDJ</footer>
+	</p>
+	<p class="info">
+		"Good Better Best !"</p>
+		<footer class="footer">- Scarlett Witch</footer>
+	</p>
+	</div>
+</div>
+<div class="col-md-4">
+	<div>
+		<h2 class="display-4" align="center"> From the Blog</h2>
+		<p class="info">
+		This is to shout out about the response we get from the audience with
+		the huge crowd experience and thanks to the public support and immense love for us during this tough times.
+		As we  are also launching our second mission part and soon will become the top most technology giant among the competitors
+		and surely create monopoly by our upcooming projects and products. We believe in you and your faith bring us from the scrap 
+		to top. Thank you so much. </p>
+
+</div>
+</div>
+<div class="col-md-4" id="contact">
+	<div>
+		<h2 class="display-4" align="center"> We are Social !</h2>
+		<p class="info">
+		
+			<a href="#" class="fa fa-facebook"></a> <a href="#" class="fa fa-instagram"></a> <br>
+			 <a href="#" class="fa fa-pinterest"></a><a href="#" class="fa fa-linkedin"></a> <br>
+			<a href="#" class="fa fa-twitter"></a> <a href="#" class="fa fa-snapchat"> </a><br>
+			
+			<a href="#" class="fa fa-whatsapp"></a> <a href="#" class="fa fa-youtube"></a><br>
+			</p>
+		</div>
+	</div>
+</div>
+			<hr style="border: 1px dotted #991f1f; ">
+<hr style="border: 1px solid#991f1f;margin-top:-12px; ">
+
+<div class="gallery" id="gallery">
+	<br><br><br>
+		<div class="col-md-12"><h1>Gallery</h1></div>
+		<div class="container">
+		<div class="row">
+			<div class="col-md-4">
+				<img id="gal" src="food.jpg">
+			</div>
+			<div class="col-md-4">
+				<img id="gal" src="food2.jpg">
+			</div>
+			<div class="col-md-4">
+				<img id="gal" src="food3.jpg">
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-4">
+				<img id="gal" src="food4.jpg">
+			</div>
+			<div class="col-md-4">
+				<img id="gal" src="food5.jpg">
+			</div>
+			<div class="col-md-4">
+				<img id="gal" src="food7.jpg">
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-4">
+				<img id="gal" src="food6.jpg">
+			</div>
+			<div class="col-md-4">
+				<img id="gal" src="food8.jpg">
+			</div>
+			<div class="col-md-4">
+				<img id="gal" src="food9.jpeg">
+			</div>
+		</div>
+	</div>
+
+</div>
+<hr style="border: 1px dotted #991f1f;margin-top:52px; ">
+<hr style="border: 1px solid#991f1f;margin-top:-12px; ">
+
+<div class="container">
+	<footer style="position: relative;height: 100px;">
+		<br>
+		<div class="copyright">
+		<h3>&#169 Copyright 2018 <strong style="color: black;font-weight: normal;"> All Rights Reserved</strong> Domain Name</h3>
+		</div>
+		<div class="name">
+		<h2 style="position: absolute; top: 22px;right: 2px;"><strong style="color: black;font-weight: normal;"> Design By</strong> Rajput Abhijeetsinh</h2>
+		</div>
+	</footer>
+</div>
+</body>
+
+</html>
